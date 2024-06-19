@@ -3,7 +3,7 @@
 
 ### Диграмма для базы данных застройщиков, их объектов и покупателей.
 
-![диаграмма](https://github.com/sidorovAlexeyTest/OTUS_HW_DB_COMMON/blob/otus_hw_1/img/postgres%20-%20otus_hw_1.png)
+![диаграмма](https://github.com/sidorovAlexeyTest/OTUS_HW_DB_COMMON/blob/main/img/postgres%20-%20otus_hw_1.png)
 
 ### Бизнес цель: Создание сайта агрегатора для покупки и продажи квартир
 > Для справки про табличку **"buyer"**. Так как строение БД довольно простое, именно для обучения, была добавлена табличка **"buyer"** имеющая связь *ManyToMany*.
