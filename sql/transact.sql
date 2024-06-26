@@ -5,8 +5,8 @@ create sequence if not exists otus_hw_1.housing_complex_seq as bigint increment 
 
 create table if not exists otus_hw_1.housing_complex(
 	id bigint primary key default nextval('otus_hw_1.housing_complex_seq'),
-	hb_name varchar(25) not null,
-	hb_description varchar(25)
+	name varchar(25) not null,
+	description varchar(25)
 );
 
 comment on table otus_hw_1.housing_complex is 'Компания застройщика';
@@ -32,7 +32,8 @@ create sequence if not exists otus_hw_1.object_type_catalog_seq as bigint increm
 
 create table if not exists otus_hw_1.object_type_catalog(
 	id bigint primary key default nextval('otus_hw_1.object_type_catalog_seq'),
-	name varchar(25) not null default 'unknown'
+	name varchar(25) not null default 'unknown',
+	slug varchar(25) not null
 );
 
 comment on table otus_hw_1.object_type_catalog is 'Тип объекта(квартиа, апартаменты...)';
@@ -41,7 +42,8 @@ create sequence if not exists otus_hw_1.object_status_catalog_seq as bigint incr
 
 create table if not exists otus_hw_1.object_status_catalog(
 	id bigint primary key default nextval('otus_hw_1.object_status_catalog_seq'),
-	name varchar(25) not null default 'unknown'
+	name varchar(25) not null default 'unknown',
+	slug varchar(25) not null
 );
 
 comment on table otus_hw_1.object_status_catalog is 'Статус объекта(продан, свободен...)';
@@ -70,7 +72,8 @@ create sequence if not exists otus_hw_1.object_space_type_catalog_seq as bigint 
 
 create table if not exists otus_hw_1.object_space_type_catalog(
 	id bigint primary key default nextval('otus_hw_1.object_space_type_catalog_seq'),
-	name varchar(25) not null default 'unknown'
+	name varchar(25) not null default 'unknown',
+	slug varchar(25) not null
 );
 
 comment on table otus_hw_1.object_space_type_catalog is 'Тип пространства в объекте';
@@ -94,7 +97,8 @@ create sequence if not exists otus_hw_1.identify_doc_type_catalog_seq as bigint 
 
 create table if not exists otus_hw_1.identify_doc_type_catalog(
 	id bigint primary key default nextval('otus_hw_1.identify_doc_type_catalog_seq'),
-	name varchar(25) not null default 'unknown'
+	name varchar(25) not null default 'unknown',
+	slug varchar(25) not null
 );
 
 comment on table otus_hw_1.identify_doc_type_catalog is 'Тип документа удостоверяющего личность(паспорт, загран. паспорт...)';
